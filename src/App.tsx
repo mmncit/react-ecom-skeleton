@@ -1,5 +1,7 @@
-import React from "react";
 import "./App.css";
+import * as React from "react";
+import { IconButton, Tooltip } from "@material-ui/core";
+import { useStyles } from "./App.styles";
 
 function Header(props: { name: string }) {
   return (
@@ -25,11 +27,24 @@ function Footer(props: { year: number }) {
   );
 }
 
+function BasicTooltip() {
+  const classes = useStyles();
+  return (
+    <Tooltip
+      title="See the food menu"
+      classes={{ tooltip: classes.tooltipStyle }}
+    >
+      <IconButton>Visit us</IconButton>
+    </Tooltip>
+  );
+}
+
 function App() {
   return (
     <div className="App">
       <Header name="Mohabbatie" />
       <Main />
+      <BasicTooltip />
       <Footer year={new Date().getFullYear()} />
     </div>
   );
