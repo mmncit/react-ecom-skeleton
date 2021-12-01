@@ -11,10 +11,15 @@ function Header(props: { name: string }) {
   );
 }
 
-function Main() {
+function Main(props: { dishes: string[] }) {
   return (
     <section>
       <p>We serve the most delicious food around.</p>
+      <ul style={{ textAlign: "left" }}>
+        {props.dishes.map((dish) => (
+          <li>{dish}</li>
+        ))}
+      </ul>
     </section>
   );
 }
@@ -39,11 +44,20 @@ function BasicTooltip() {
   );
 }
 
+const dishes = [
+  "Macaroni and Cheese",
+  "Salmon",
+  "Tofu with Vegetables",
+  "Minestrone",
+];
+
+dishes.map((dish) => console.log());
+
 function App() {
   return (
     <div className="App">
       <Header name="Mohabbatie" />
-      <Main />
+      <Main dishes={dishes} />
       <BasicTooltip />
       <Footer year={new Date().getFullYear()} />
     </div>
