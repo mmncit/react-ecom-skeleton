@@ -11,13 +11,13 @@ function Header(props: { name: string }) {
   );
 }
 
-function Main(props: { dishes: string[] }) {
+function Main(props: { dishes: Dish[] }) {
   return (
     <section>
       <p>We serve the most delicious food around.</p>
       <ul style={{ textAlign: "left" }}>
         {props.dishes.map((dish) => (
-          <li>{dish}</li>
+          <li key={dish.id}>{dish.title}</li>
         ))}
       </ul>
     </section>
@@ -51,13 +51,18 @@ const dishes = [
   "Minestrone",
 ];
 
-dishes.map((dish) => console.log());
+interface Dish {
+  id: number;
+  title: string;
+}
+
+const dishObjects: Dish[] = dishes.map((dish, i) => ({ id: i, title: dish }));
 
 function App() {
   return (
     <div className="App">
       <Header name="Mohabbatie" />
-      <Main dishes={dishes} />
+      <Main dishes={dishObjects} />
       <BasicTooltip />
       <Footer year={new Date().getFullYear()} />
     </div>
