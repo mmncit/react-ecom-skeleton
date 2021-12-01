@@ -2,6 +2,7 @@ import "./App.css";
 import * as React from "react";
 import { IconButton, Tooltip } from "@material-ui/core";
 import { useStyles } from "./App.styles";
+import intro from "./res/intro.jpg";
 
 function Header(props: { name: string }) {
   return (
@@ -15,6 +16,7 @@ function Main(props: { dishes: Dish[] }) {
   return (
     <section>
       <p>We serve the most delicious food around.</p>
+      <img src={intro} alt="places and glasses" />
       <ul style={{ textAlign: "left" }}>
         {props.dishes.map((dish) => (
           <li key={dish.id}>{dish.title}</li>
