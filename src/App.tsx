@@ -3,6 +3,8 @@ import * as React from "react";
 import { IconButton, Tooltip } from "@material-ui/core";
 import { useStyles } from "./App.styles";
 import intro from "./res/intro.jpg";
+import { Counter } from "./Counter";
+import { ReduxApp } from "./ReduxApp";
 
 function Header(props: { name: string }) {
   return (
@@ -63,10 +65,8 @@ const dishObjects: Dish[] = dishes.map((dish, i) => ({ id: i, title: dish }));
 function App() {
   return (
     <div className="App">
-      <Header name="Mohabbatie" />
-      <Main dishes={dishObjects} />
-      <BasicTooltip />
-      <Footer year={new Date().getFullYear()} />
+      <Counter />
+      <ReduxApp />
     </div>
   );
 }
