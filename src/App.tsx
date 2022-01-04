@@ -1,12 +1,12 @@
 import "./App.css";
 import * as React from "react";
 
-import EffectBlog from "./EffectBlog";
+import EffectWindow from "./EffectWindow";
 
 function App() {
   return (
     <div className="App">
-      <EffectBlog />
+      <EffectWindow />
     </div>
   );
 }
