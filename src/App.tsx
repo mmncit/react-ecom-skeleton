@@ -1,12 +1,12 @@
 import "./App.css";
 import * as React from "react";
 
-import RefName from "./RefName";
+import ContextTheme from "./ContextTheme";
 
 function App() {
   return (
     <div className="App">
-      <RefName />
+      <ContextTheme />
     </div>
   );
 }
