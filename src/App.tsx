@@ -1,12 +1,12 @@
 import "./App.css";
 import * as React from "react";
 
-import MemoSlowFn from "./MemoSlowFn";
+import RefName from "./RefName";
 
 function App() {
   return (
     <div className="App">
-      <MemoSlowFn />
+      <RefName />
     </div>
   );
 }
