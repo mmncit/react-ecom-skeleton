@@ -1,12 +1,12 @@
 import "./App.css";
 import * as React from "react";
 
-import EffectWindow from "./EffectWindow";
+import MemoSlowFn from "./MemoSlowFn";
 
 function App() {
   return (
     <div className="App">
-      <EffectWindow />
+      <MemoSlowFn />
     </div>
   );
 }
